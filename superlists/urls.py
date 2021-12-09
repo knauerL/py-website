@@ -19,4 +19,8 @@ from lists import views
 
 urlpatterns = [
     url(r'^$', views.home_page, name="home"),
+    #url(r'^(filename).html', views.page_page, name="page"),
+    url(r'^name.html', views.name_page, name="name"),
+    url(r'^cat.html', views.cat_page, name="cat"),
+    url(r'^dog.html', views.dog_page, name="dog"),
 ]
