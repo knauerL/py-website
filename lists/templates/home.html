@@ -1,0 +1,13 @@
+<html>
+    <title>Escape Game</title>
+    <body>
+        <h1>Welcome traveler</h1>
+        <p id="txt1">What is your name?</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" id="plName" name="plName">
+            <input type="submit" value="Enter" id="submit" name="submit">
+        </form>
+        
+    </body>
+</html>
