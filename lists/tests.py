@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import resolve
-from lists.views import home_page, cat_page, dog_page
+from lists.views import home_page, cat_page, dog_page, right_page, left_page
 from django.http import HttpRequest, request, response
 
 # Create your tests here.
@@ -27,3 +27,12 @@ class HomePageTest(TestCase):
         found = resolve('/dog.html')
         self.assertEqual(found.func, dog_page, "test.py - DOG PAGE resolves incorrectly")
         
+#TESTS FOR W3 ASSN
+#TO COTTRELL: I know that you said my unit tests look bare, but if I'm being completely honest, I'm completely lost on what these do and how to do them. I understand the functional tests fine and can do them, but these are just like a blind side for me.
+    def testLeftPage(self):
+        found = resolve('/left.html')
+        self.assertEqual(found.func, left_page, 'test.py - LEFT PAGE resolves incorrectly')
+    
+    def testRightPage(self):
+        found = resolve('/right.html')
+        self.assertEqual(found.func, right_page, 'test.py - LEFT PAGE resolves incorrectly')

@@ -23,4 +23,6 @@ urlpatterns = [
     #url(r'^name.html', views.name_page, name="name"),
     url(r'^cat.html', views.cat_page, name="cat"),
     url(r'^dog.html', views.dog_page, name="dog"),
+    url(r'^right.html', views.right_page, name="right"),
+    url(r'^left.html', views.left_page, name="left"),
 ]

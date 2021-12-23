@@ -23,3 +23,11 @@ def dog_page(request):
 def cat_page(request):
     #return HttpResponse('<html><title>Cat Choice</title><body><h1>You chose the cat to follow, what next?</h1><p>CODE TO BE WRITTEN HERE</p></body></html>')
     return render(request, 'cat.html')
+
+def right_page(request):
+    #return HttpResponse('{% load static %}<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RIGHT PATH</title></head><body><div class="row"><div class="col-md-3"><p>DUMMY TEXT</p></div><div class="col-md-6"><h1>You chose the path on the right..</h1><h3>Now you face </h3></div><div class="col-md-3"><p>DUMMY TEXT</p></div></div></body></html>')
+    return render(request, 'right.html')
+
+def left_page(request):
+    #return HttpResponse('{% load static %}<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LEFT PATH</title></head><body><div class="row"><div class="col-md-3"><p>DUMMY TEXT</p></div><div class="col-md-6"><h1>You chose the path on the left..</h1><h3>Now you face </h3></div><div class="col-md-3"><p>DUMMY TEXT</p></div></div></body></html>')
+    return render(request, 'left.html')
