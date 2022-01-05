@@ -50,7 +50,7 @@ class FunctionalTest(unittest.TestCase):
         self.browser.find_element_by_id("btn3").click()
         self.browser.find_element_by_id("btn5").click()
         #imgId = self.browser.find_element_by_id('trees')
-        self.assertIn('fgdlf', self.browser.find_element_by_id('fgdlf'), 'functional test - trees ID not found')
+        self.assertIn('trees', self.browser.find_element_by_id('trees'), 'functional test - trees ID not found')
     
     def testRightPage(self):
         self.browser.find_element_by_id("submit").click()
