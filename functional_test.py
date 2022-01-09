@@ -45,24 +45,57 @@ class FunctionalTest(unittest.TestCase):
         self.assertIn('There is a dog and a cat. Which one will you follow?', pTxt, 'functional test - doesnt direct to right page')
 
 #TESTS FOR W3 ASSN
+    @skip
     def testTreeImages(self):
         self.browser.find_element_by_id("submit").click()
         self.browser.find_element_by_id("btn3").click()
         self.browser.find_element_by_id("btn5").click()
         #imgId = self.browser.find_element_by_id('trees')
         self.assertIn('trees', self.browser.find_element_by_id('trees'), 'functional test - trees ID not found')
-    
+    @skip
     def testRightPage(self):
         self.browser.find_element_by_id("submit").click()
         self.browser.find_element_by_id("btn3").click()
         self.browser.find_element_by_id("btn5").click()
         self.assertIn('http://localhost:8000/right.html', self.browser.current_url, 'functional test - doesnt direct to right page')
-
+    @skip
     def testLeftPage(self):
         self.browser.find_element_by_id("submit").click()
         self.browser.find_element_by_id("btn3").click()
         self.browser.find_element_by_id("btn4").click()
         self.assertIn('http://localhost:8000/left.html', self.browser.current_url, 'functional test - doesnt direct to right page')
+
+#TESTS FOR W4 ASSN
+    def testWinBtn(self):
+        self.browser.find_element("submit").click()
+        self.browser.find_element_by_id("btn3").click()
+        self.browser.find_element_by_id("btn4").click()
+        self.browser.find_element_by_id("btn6").click()
+        self.assertIn('http://localhost:8000/win.html', self.browser.current_url, 'functional test - doesnt direct to the winning page page')
+
+    def testLoseBtn(self):
+        self.browser.find_element("submit").click()
+        self.browser.find_element_by_id("btn3").click()
+        self.browser.find_element_by_id("btn4").click()
+        self.browser.find_element_by_id("btn7").click()
+        self.assertIn('http://localhost:8000/lose.html', self.browser.current_url, 'functional test - doesnt direct to the losing page page')
+
+    def testWinPage(self):
+        self.browser.find_element("submit").click()
+        self.browser.find_element_by_id("btn3").click()
+        self.browser.find_element_by_id("btn4").click()
+        self.browser.find_element_by_id("btn6").click()
+        h1Txt = self.browser.find_element_by_tag_name("h1").text
+        self.assertIn("You've successfully defeated your enemy, congratulations.", h1Txt, 'functional test - doesnt direct to the winners page page')
+    
+    def testLosePage(self):
+        self.browser.find_element("submit").click()
+        self.browser.find_element_by_id("btn3").click()
+        self.browser.find_element_by_id("btn4").click()
+        self.browser.find_element_by_id("btn7").click()
+        h1Txt = self.browser.find_element_by_tag_name("h1").text
+        self.assertIn("You chose wrong, and you've been killed, rest in peace.", h1Txt, 'functional test - doesnt direct to the losers page page')
+
 
 if __name__ == '__main__':
     unittest.main()
