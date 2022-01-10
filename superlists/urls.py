@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^dog.html', views.dog_page, name="dog"),
     url(r'^right.html', views.right_page, name="right"),
     url(r'^left.html', views.left_page, name="left"),
+    url(r'^win.html', views.win_page, name="win"),
+    url(r'^lose.html', views.lose_page, name="lose"),
 ]

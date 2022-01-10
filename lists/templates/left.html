@@ -5,17 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{% static 'darkly.css' %}">
+    <link rel="stylesheet" href="{% static 'sketchy.css' %}">
     <title>LEFT PATH</title>
   </head>
-  <body>
+  <body style="background-color: darkgray;">
     <div class="row">
         <div class="col-md-3">
             <img src="{% static 'images/trees2.jpg' %}" alt="creepy trees" title="creepy trees" class="img-fluid" id="trees2">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="text-align: center;">
             <h1>You chose the path on the left..</h1>
             <h3>Now you face a skinwalker. Will you burn it with the torch or shoot it with the bow and arrow?</h3>
+            <a href="win.html">
+              <button type="submit"id="btn6">Burn it</button>
+            </a>
+            <a href="lose.html">
+              <button type="submit"id="btn7">Shoot it</button>
+            </a>
         </div>
         <div class="col-md-3">
             <img src="{% static 'images/trees2.jpg' %}" alt="creepy trees" title="creepy trees" class="img-fluid" id="trees3">

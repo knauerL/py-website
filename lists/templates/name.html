@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="{% static 'sketchy.css' %}">
     <title>{{ thePlayer.plName }}</title>
   </head>
-    <body>
+    <body style="background-color: darkgray;">
         <h1>Thank you {{ thePlayer.plName }}</h1>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="text-align: center;">
                 <p id="txt2">There is a dog and a cat. Which one will you follow?</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="text-align: center;">
             <div class="col-md-6">
                 <a href="dog.html">
                     <button type="submit"id="btn2">Dog</button>
