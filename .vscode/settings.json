@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/333d4847-8746-4723-af23-543c1b7946f1/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/sknauerPyWebsite",
+    "appService.deploySubpath": "."
+}
